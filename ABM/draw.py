@@ -29,36 +29,56 @@ def convert_to_array(glob):
 def narisi_graf(seznam,svet,STOP):
     xx,yt,yo,yv=seznam
     
-    plt.figure(figsize=(15,10))
-    plt.subplot(231)
+    plt.figure(figsize=(9,9))
+    plt.subplot(331)
     plt.plot(xx,yt,color="green")
     plt.xlabel("Iteracija")
     plt.xlim(0,STOP)
 
-    plt.subplot(232)
+    plt.subplot(332)
     plt.plot(xx,yo,color="orange")
     plt.xlabel("Iteracija")
     plt.xlim(0,STOP)
 
-    plt.subplot(233)
+    plt.subplot(333)
     plt.plot(xx,yv,color="grey")
     plt.xlabel("Iteracija")
     plt.xlim(0,STOP)
     
+
+    plt.subplot(334)
+    plt.plot(yt,yo,color="green")
+    plt.xlabel("Populacija trave")
+    plt.ylabel("Populacija ovc")
+    plt.scatter(yt[0],yo[0],label="Start")
+    plt.scatter(yt[-1],yo[-1],label="End")
+    plt.legend()
+
+    plt.subplot(335)
+    plt.plot(yo,yv,color="orange")
+    plt.ylabel("Populacija volkov")
+    plt.xlabel("Populacija ovc")
+    plt.scatter(yo[0],yv[0],label="Start")
+    plt.scatter(yo[-1],yv[-1],label="End")
+    plt.legend()
+
+    plt.subplot(336)
+    plt.plot(yt,yv,color="grey")
+    plt.ylabel("Populacija volkov")
+    plt.xlabel("Populacija trave")
+    plt.scatter(yt[0],yv[0],label="Start")
+    plt.scatter(yt[-1],yv[-1],label="End")
+    plt.legend()
     
     layer_trava,layer_ovce,layer_volk=convert_to_array(svet)
-    print(layer_trava)
-    plt.subplot(234)
+    plt.subplot(337)
     plt.imshow(layer_trava,vmin=0,vmax=1)
-    plt.colorbar()
     
-    plt.subplot(235)
-    plt.imshow(layer_trava,cmap="Greys",vmin=0,vmax=1)
-    plt.colorbar()
+    plt.subplot(338)
+    plt.imshow(layer_ovce,cmap="Greys",vmin=0,vmax=1)
     
-    plt.subplot(236)
-    plt.imshow(layer_trava,cmap="Greys",vmin=0,vmax=1)
-    plt.colorbar()
+    plt.subplot(339)
+    plt.imshow(layer_volk,cmap="Greys",vmin=0,vmax=1)
     
     plt.tight_layout()
     plt.show()

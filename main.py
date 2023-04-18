@@ -1,11 +1,11 @@
 import ABM as abm
 import matplotlib.pyplot as plt
 
-n_trave=80
-n_ovc=20
-n_volkovi=1
+n_trave=(int)(20/100*(50*50))
+n_ovc=(int)((20*50*50)/100)
+n_volkovi=(int)(2/100*(50*50))
 
-velikost_sveta=(10,10)
+velikost_sveta=(50,50)
 populacija=[n_trave,n_ovc,1]
 
 svet=abm.Simulacija(velikost_sveta,populacija)
@@ -32,7 +32,7 @@ for time in range(STOP):
     
     print(time,Energija,no,nv)
     xx.append(time)
-    yt.append(Energija)
+    yt.append(Energija/n_trave)
     yo.append(no)
     yv.append(nv)
     

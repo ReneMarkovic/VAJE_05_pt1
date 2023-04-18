@@ -89,7 +89,8 @@ class Simulacija:
             self.name=f"trava_id_{id(self):04d}"
         
         def rast_trave(self):
-            self.energija += 0.2
+            if self.energija<100.0:
+                self.energija += 1.0
     
     class Ovca:
         def __init__(self,x,y):
@@ -176,7 +177,7 @@ class Simulacija:
             
             self.x=nov_x
             self.y=nov_y
-            self.energija -= 0.5
+            self.energija -= 0.2
 
             if self.energija<0:
                 self.status="Pokojna"
