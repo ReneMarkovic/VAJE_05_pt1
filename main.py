@@ -1,11 +1,14 @@
 import ABM as abm
-import matplotlib.pyplot as plt
 
-n_trave=(int)(20/100*(50*50))
-n_ovc=(int)((20*50*50)/100)
-n_volkovi=(int)(2/100*(50*50))
+nx=50
+ny=50
+N=nx*ny
 
-velikost_sveta=(50,50)
+n_trave=(int)(N*20/100)
+n_ovc=(int)(N*20/100)
+n_volkovi=(int)(N*2/100)
+
+velikost_sveta=(nx,ny)
 populacija=[n_trave,n_ovc,1]
 
 svet=abm.Simulacija(velikost_sveta,populacija)

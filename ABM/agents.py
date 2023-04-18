@@ -1,6 +1,5 @@
 import random
 import matplotlib.pyplot as plt
-import sys
 from typing import List, Tuple
 
 # import pygame #Rabimo do naslednjič
