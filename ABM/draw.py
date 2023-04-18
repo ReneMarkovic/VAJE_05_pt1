@@ -81,4 +81,5 @@ def narisi_graf(seznam,svet,STOP):
     plt.imshow(layer_volk,cmap="Greys",vmin=0,vmax=1)
     
     plt.tight_layout()
+    plt.savefig("results.png")
     plt.show()

@@ -34,8 +34,11 @@ Vsaka simulacija se izvaja v več korakih, v katerih se agenti premikajo, hranij
 - Namestite Python
 - Prenesite datoteke simulacije
 - Namestite potrebne knjižnice s pomočjo ukaza pip - install -r requirements.txt
+- Zaženite datoteko main.py
 
-- Zaženite datoteko main.pyž
+# Primer rezultata
+![rezultat](results.png)
+
 
 # Prilagoditve simulacije
 
